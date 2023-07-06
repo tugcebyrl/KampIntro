@@ -31,8 +31,10 @@
             //Console.WriteLine(result2);
             //Console.WriteLine(number1);
 
-            Console.WriteLine(Multiply(2,3));
-            Console.WriteLine(Multiply(2,3,4));
+            //Console.WriteLine(Multiply(2,3));
+            //Console.WriteLine(Multiply(2,3,4));
+
+            Console.WriteLine(Add6(6, 7, 1, 55, 478));
 
         }
 
@@ -75,6 +77,13 @@
         static int Multiply(int number1, int number2,int number3)
         {
             return number1 * number2 * number3;
+        }
+
+        //PARAMS KEYWORD
+
+        static int Add6(params int[] numbers) 
+        {
+            return numbers.Sum();
         }
     }
 }
