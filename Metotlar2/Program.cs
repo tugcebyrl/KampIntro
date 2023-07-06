@@ -18,11 +18,22 @@
             //Console.WriteLine(number1);
 
             //ref keyword ile number1 degerini degistirdik
-            int number1 = 20;
-            int number2 = 100;
-            var result2=Add4(ref number1, number2);
-            Console.WriteLine(result2);
-            Console.WriteLine(number1);
+            //int number1 = 20;
+            //int number2 = 100;
+            //var result2=Add4(ref number1, number2);
+            //Console.WriteLine(result2);
+            //Console.WriteLine(number1);
+
+            //ref keyword ile ayni mantik calisir tek fark degiskene basta default deger vermeye gerek yoktur
+            //int number1;
+            //int number2 = 100;
+            //var result2=Add5(out number1, number2);
+            //Console.WriteLine(result2);
+            //Console.WriteLine(number1);
+
+            Console.WriteLine(Multiply(2,3));
+            Console.WriteLine(Multiply(2,3,4));
+
         }
 
         static void Add() 
@@ -46,6 +57,24 @@
         {
             number1 = 30;
             return number1 + number2;
+        }
+
+        static int Add5(out int number1, int number2)
+        {
+            number1 = 30;
+            return number1 + number2;
+        }
+
+        //METHOD OVERLOADING
+
+        static int Multiply(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+
+        static int Multiply(int number1, int number2,int number3)
+        {
+            return number1 * number2 * number3;
         }
     }
 }
