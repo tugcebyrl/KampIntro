@@ -18,6 +18,12 @@ namespace GenericsIntro
         {
             T[] tempArray = items; //Gecici dizi ile listedeki verilerin referans adresini sakliyoruz
             items = new T[items.Length + 1];
+            for (int i = 0; i < tempArray.Length; i++)
+            {
+                items[i] = tempArray[i];
+                Console.WriteLine(items[i]);
+            }
+            items[items.Length - 1] = item;
         }
     }
 }
